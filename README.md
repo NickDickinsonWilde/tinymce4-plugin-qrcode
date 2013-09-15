@@ -1,4 +1,4 @@
-### tinymce4-plugin-qrcode
+tinymce 4 plugin qrcode
 ======================
 
 A QRcode wizzard plugin for tinymce 4
