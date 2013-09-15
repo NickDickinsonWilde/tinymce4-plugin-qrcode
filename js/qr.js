@@ -13,12 +13,12 @@
 	    } else {
 
 	        if( $("#image").is(':empty')) {
-	            $("#image").append("<img src='http://chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='" + alttag + "' />");
+	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='" + alttag + "' />");
 	            $("#arrow").show();
 	            return false;
 	        } else {
 	            $("#image").html("");
-	            $("#image").append("<img src='http://chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='" + alttag + "' />");
+	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='" + alttag + "' />");
 	            $("#arrow").show();
 	            return false;
 	        }
