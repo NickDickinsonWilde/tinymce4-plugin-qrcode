@@ -1,8 +1,7 @@
 tinyMCE 4 plugin qrcode
 ======================
 
-A QRcode wizzard plugin for tinyMCE 4
-#( Build with Bootstrap version 3 build 2 )
+A QRcode wizzard plugin for tinyMCE 4 ( Build with Bootstrap version 3 build 2 )
 
 ### installation
 
