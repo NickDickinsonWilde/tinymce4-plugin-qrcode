@@ -1,7 +1,6 @@
 	$("#generate").click(function() {
 
 	    var data = $("#codeData").val().replace(/\s/g, '+');
-	    var alttag = $("#codeData").val();
 	    var size = $("#codeSize").val();
 	    var encoding = $("#SelectCodding").val();
 
@@ -13,12 +12,12 @@
 	    } else {
 
 	        if( $("#image").is(':empty')) {
-	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='" + alttag + "' />");
+	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='Scan QRcode' />");
 	            $("#arrow").show();
 	            return false;
 	        } else {
 	            $("#image").html("");
-	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='" + alttag + "' />");
+	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='Scan QRcode' />");
 	            $("#arrow").show();
 	            return false;
 	        }
