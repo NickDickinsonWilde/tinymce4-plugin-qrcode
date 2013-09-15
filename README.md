@@ -3,10 +3,10 @@ tinymce 4 plugin qrcode
 
 A QRcode wizzard plugin for tinymce 4
 
+### installation
+
 Create map qrcode in tinymce/plugins/
-
 Upzip all files in to the map qrcode
-
 Now add qrcode to the plugins: and toolbar:
 
 ```html
