@@ -27,7 +27,7 @@ tinymce.init({
 
 ### Demo
 
-For a demo <a href="http://www.cfcms.nl/tinymce-youtube/index.html#demo">see this page</a>
+For a demo <a href="http://www.cfcms.nl/tinymce-youtube/index.html#demo">see this page</a> or have a look at <a href="http://www.youtube.com/watch?v=Kps3Q081nQc">this video</a>
 
 Also don't forget to get my other tinyMCE 4 plugin 'TinyMCE 4 plugin Youtube search and insert'
 
