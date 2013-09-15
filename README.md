@@ -35,7 +35,7 @@ Grab it <a href="http://codecanyon.net/item/tinymce-4-plugin-youtube-search-and-
 
 ### Commercial use
 
-For <b>commercial use</b> you can buy an unlimited license for one product for 25,-- EURO (for example a cms)
+For <b>commercial use</b> you can buy an unlimited license for one product for 25,-- EURO (excl. VAT) (for example a cms)
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UP9CAH952MAFA">Click here to buy the license with paypal !</a>
 
