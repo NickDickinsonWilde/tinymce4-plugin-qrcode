@@ -18,9 +18,4 @@ Grab it <a href="http://codecanyon.net/item/tinymce-4-plugin-youtube-search-and-
 
 For <b>commercial use</b> you can buy an unlimited license for one product for 25,-- EURO (for example a cms)
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="UP9CAH952MAFA">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-</form>
+&lt;form action=&quot;https://www.paypal.com/cgi-bin/webscr&quot; method=&quot;post&quot; target=&quot;_top&quot;&gt;<br/>&lt;input type=&quot;hidden&quot; name=&quot;cmd&quot; value=&quot;_s-xclick&quot;&gt;<br/>&lt;input type=&quot;hidden&quot; name=&quot;hosted_button_id&quot; value=&quot;UP9CAH952MAFA&quot;&gt;<br/>&lt;input type=&quot;image&quot; src=&quot;https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif&quot; border=&quot;0&quot; name=&quot;submit&quot; alt=&quot;PayPal - The safer, easier way to pay online!&quot;&gt;<br/>&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif&quot; width=&quot;1&quot; height=&quot;1&quot;&gt;<br/>&lt;/form&gt;
