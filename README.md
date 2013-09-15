@@ -6,7 +6,9 @@ A QRcode wizzard plugin for tinymce 4
 ### installation
 
 Create map qrcode in tinymce/plugins/
+
 Upzip all files in to the map qrcode
+
 Now add qrcode to the plugins: and toolbar:
 
 ```html
@@ -28,6 +30,7 @@ tinymce.init({
 For a demo <a href="http://www.cfcms.nl/tinymce-youtube/index.html#demo">see this page</a>
 
 Also don't forget to get my other tinyMCE 4 plugin 'TinyMCE 4 plugin Youtube search and insert'
+
 Grab it <a href="http://codecanyon.net/item/tinymce-4-plugin-youtube-search-and-insert/5495575?ref=ceasar">here</a>
 
 ### Commercial use
