@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>
+    QR-Code Generator
+  </title>
+
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+	<![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form id="generator" class="form-horizontal">
+
+          <div class="form-group">
+            <label class="col-xs-2 control-label" for="codeData">
+              Data
+            </label>
+
+            <div class="col-xs-10">
+              <input class="form-control" id="codeData" placeholder=
+              "" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-5 control-label" for=
+            "codeSize">
+              Size:
+            </label>
+
+            <div class="col-xs-7">
+              <select class=" form-control" id="codeSize">
+                <option value="75">
+                  XXSmall
+                </option>
+                <option value="125">
+                  XSmall
+                </option>
+                <option value="150" selected="selected">
+                  Small
+                </option>
+                <option value="180">
+                  Medium
+                </option>
+                <option value="250">
+                  Large
+                </option>
+                <option value="300">
+                  XLarge
+                </option>
+                <option value="450">
+                  XXLarge
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-5 control-label" for=
+            "SelectCodding">
+              Encoding:
+            </label>
+
+            <div class="col-xs-7">
+              <select class=" form-control" id="SelectCodding">
+                <option value="UTF-8" selected="selected">
+                  UTF-8
+                </option>
+                <option value="Shift_JIS">
+                  Shift_JIS
+                </option>
+                <option value="ISO-8859-1">
+                  ISO-8859-1
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-xs-3 pull-right">
+            <button id="generate" type="button" class="btn btn-primary pull-right">
+              <span class="glyphicon glyphicon-qrcode">
+              </span>
+              Generate
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <div id="image">
+      </div>
+      <span id="arrow" class="glyphicon glyphicon-arrow-up">
+        &nbsp;Click!
+      </span>
+
+      <div id="alert_placeholder">
+      </div>
+
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#formats">
+        Help data formats ?
+      </button>
+
+
+      <div id="formats" class="panel panel-default collapse">
+        <!-- Default panel contents -->
+
+        <!-- List group -->
+        <ul class="list-group">
+          <li class="list-group-item">
+            Text &rarr; normal text input
+          </li>
+          <li class="list-group-item">
+            Url &rarr; http://www.info.com
+          </li>
+          <li class="list-group-item">
+            Email &rarr; mailto:info@info.com
+          </li>
+          <li class="list-group-item">
+            Tel &rarr; tel:+332454678
+          </li>
+          <li class="list-group-item">
+            SMS &rarr; smsto:+332454678:subject
+          </li>
+          <li class="list-group-item">
+            Bookmark &rarr; MEBKM:TITLE:here title:URL:http://www.info.com
+          </li>
+        </ul>
+      </div>
+
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+	if (typeof jQuery === 'undefined')
+    {
+      document.write(unescape("%3Cscript src='js/jquery.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+  </script>
+  <script src="./js/bootstrap.min.js">
+  </script>
+  <script src="./js/qr.js">
+  </script>
+  </body>
+</html>
