@@ -21,7 +21,7 @@ tinymce.PluginManager.add('qrcode', function(editor) {
             file: tinyMCE.baseURL + '/plugins/qrcode/qrcode.html',
             filetype: 'image',
 	    	width: 785,
-            height: 590,
+            height: 540,
             inline: 1,
             buttons: [{
                 text: 'cancel',

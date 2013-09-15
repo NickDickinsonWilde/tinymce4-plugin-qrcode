@@ -64,3 +64,8 @@
 		}, 3000);
 
 	};
+
+	$('#formatOption').change(function(){
+	    var selected_item = $(this).val();
+	    $('#codeData').val(selected_item);
+	});

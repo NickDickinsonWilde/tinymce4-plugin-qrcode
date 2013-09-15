@@ -26,6 +26,33 @@
         <form id="generator" class="form-horizontal">
 
           <div class="form-group">
+            <label class="col-xs-5 control-label" for=
+            "formatOption">
+              Select format:
+            </label>
+
+            <div class="col-xs-7">
+              <select class=" form-control" id="formatOption">
+                <option value="some text here" selected="selected">
+                  Text
+                </option>
+                <option value="http://www.url.com">
+                  Url
+                </option>
+                <option value="mailto:info@url.com">
+                  Email
+                </option>
+                <option value="tel:+332454678 ">
+                  Tel
+                </option>
+                <option value="smsto:+332454678:subject here ">
+                  SMS
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
             <label class="col-xs-2 control-label" for="codeData">
               Data
             </label>
