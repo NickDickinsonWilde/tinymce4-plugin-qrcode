@@ -13,14 +13,14 @@ tinymce.PluginManager.add('qrcode', function(editor) {
 
     function openmanager() {
         var title="Create QRcode";
-        if (typeof tinymce.settings.qrcode_title !== "undefined" && tinymce.settings.qrcode_title) {
-            title=tinymce.settingsqrcode_title;
+        if (typeof editor.settings.qrcode_title !== "undefined" && editor.settings.qrcode_title) {
+            title=editor.settingsqrcode_title;
         }
         win = editor.windowManager.open({
             title: title,
             file: tinyMCE.baseURL + '/plugins/qrcode/qrcode.html',
             filetype: 'image',
-	    	width: 785,
+	    	width: 550,
             height: 540,
             inline: 1,
             buttons: [{
