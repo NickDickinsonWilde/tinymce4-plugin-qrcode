@@ -33,6 +33,10 @@ Also don't forget to get my other tinyMCE 4 plugin 'TinyMCE 4 plugin Youtube sea
 
 Grab it <a href="http://codecanyon.net/item/tinymce-4-plugin-youtube-search-and-insert/5495575?ref=ceasar">here</a>
 
+Or my other tinyMCE 4 plugin 'TinyMCE 4 plugin Flickr image search and place'
+
+Grab that one <a href="http://codecanyon.net/item/tinymce-4-plugin-flickr-image-search-and-place/5703888?ref=ceasar">here</a>
+
 ### Commercial use
 
 For <b>commercial use</b> you can buy an unlimited license for one product for 25,-- EURO (excl. VAT) (for example a cms)
