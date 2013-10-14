@@ -12,6 +12,7 @@
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap theme -->
   <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="./colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
@@ -39,13 +40,13 @@
                 <option value="http://www.url.com">
                   Url
                 </option>
-                <option value="mailto:info@url.com">
+                <option value="MATMSG:TO:info@url.com;SUB:subject;BODY:message;">
                   Email
                 </option>
-                <option value="tel:+332454678 ">
+                <option value="TEL:33312450903">
                   Tel
                 </option>
-                <option value="smsto:+332454678:subject here ">
+                <option value="SMSTO:33312450903:subject here">
                   SMS
                 </option>
               </select>
@@ -58,8 +59,7 @@
             </label>
 
             <div class="col-xs-10">
-              <input class="form-control" id="codeData" placeholder=
-              "" type="text">
+              <textarea class="form-control" id="codeData" rows="3"></textarea>
             </div>
           </div>
 
@@ -71,28 +71,33 @@
 
             <div class="col-xs-7">
               <select class=" form-control" id="codeSize">
-                <option value="75">
+                <option value="75x75">
                   XXSmall
                 </option>
-                <option value="125">
+                <option value="125x125" selected="selected">
                   XSmall
                 </option>
-                <option value="150" selected="selected">
+                <option value="140x140">
                   Small
                 </option>
-                <option value="180">
+                <option value="170x170">
                   Medium
                 </option>
-                <option value="250">
+                <option value="240x240">
                   Large
                 </option>
-                <option value="300">
+                <option value="300x300">
                   XLarge
-                </option>
-                <option value="450">
-                  XXLarge
-                </option>
               </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-5 control-label" for="codeColor">
+              Color (optioneel)
+            </label>
+            <div class="col-xs-4">
+              <input class="form-control bscp" id="codeColor" value="#ffffff" type="text">
             </div>
           </div>
 
@@ -106,9 +111,6 @@
               <select class=" form-control" id="SelectCodding">
                 <option value="UTF-8" selected="selected">
                   UTF-8
-                </option>
-                <option value="Shift_JIS">
-                  Shift_JIS
                 </option>
                 <option value="ISO-8859-1">
                   ISO-8859-1
@@ -154,16 +156,19 @@
             Url &rarr; http://www.info.com
           </li>
           <li class="list-group-item">
-            Email &rarr; mailto:info@info.com?subject=current-issue
+            Email &rarr; MATMSG:TO:info@url.com;SUB:subject;BODY:message;
           </li>
           <li class="list-group-item">
-            Tel &rarr; tel:+332454678
+            Tel &rarr; TEL:33312450903
           </li>
           <li class="list-group-item">
-            SMS &rarr; smsto:+332454678:subject
+            SMS &rarr; SMSTO:33312450903:subject here
           </li>
           <li class="list-group-item">
             Bookmark &rarr; MEBKM:TITLE:here title:URL:http://www.info.com
+          </li>
+          <li class="list-group-item">
+            More info <a href="http://qrserver.com/api/documentation/create-qr-code/" target="_blank">here</a>
           </li>
         </ul>
       </div>
@@ -179,7 +184,30 @@
   </script>
   <script src="./js/bootstrap.min.js">
   </script>
+  <script src="./colorpicker/js/bootstrap-colorpicker.min.js">
+  </script>
   <script src="./js/qr.js">
+  </script>
+        <script>
+            $(function() {
+                // Code for those demos
+                var _createColorpickers = function() {
+                    $('#codeColor').colorpicker({
+                        format: 'hex'
+                    });
+                }
+                _createColorpickers();
+
+                $('.bscp-destroy').click(function(e) {
+                    e.preventDefault();
+                    $('.bscp').colorpicker('destroy');
+                });
+
+                $('.bscp-create').click(function(e) {
+                    e.preventDefault();
+                    _createColorpickers();
+                });
+            });
   </script>
   </body>
 </html>

@@ -1,10 +1,12 @@
 	$("#generate").click(function() {
 
-	    var data = $("#codeData").val().replace(/\s/g, '+');
+	    var datainput = $("#codeData").val().replace(/\s/g, '+');
 	    var size = $("#codeSize").val();
 	    var encoding = $("#SelectCodding").val();
+        var codecolor = $("#codeColor").val(function(i, v) {return v.replace("#","");}).val();
 
-	    if(data == "") {
+
+	    if(datainput == "") {
 	        showalert('Please enter a url or text or look at the Help data formats !','alert-danger');
 	        $("#generate").prop("disabled", true);
 	        return false;
@@ -12,12 +14,12 @@
 	    } else {
 
 	        if( $("#image").is(':empty')) {
-	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='Scan QRcode' />");
+	            $("#image").append("<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&bgcolor=" + codecolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=L&format=png' data-name='" + datainput + "' />");
 	            $("#arrow").show();
 	            return false;
 	        } else {
 	            $("#image").html("");
-	            $("#image").append("<img src='" + window.location.protocol + "//chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=" + size + "&choe=" + encoding + "&chld=M|1' alt='Scan QRcode' />");
+	            $("#image").append("<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&bgcolor=" + codecolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=L&format=png' data-name='" + datainput + "' />");
 	            $("#arrow").show();
 	            return false;
 	        }
@@ -26,6 +28,9 @@
 	});
 
 	$("#image").click(function() {
+
+        alert($("#image").html());
+        return false;
 	    I_InsertHTML($("#image").html());
 	    I_Close();
 	});
