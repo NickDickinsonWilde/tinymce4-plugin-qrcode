@@ -1,3 +1,13 @@
+    var text_max = 300;
+    $('#textarea_feedback').html(text_max + ' characters');
+
+    $('#codeData').keyup(function() {
+        var text_length = $('#codeData').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#textarea_feedback').html(text_remaining + ' characters');
+    });
+
 	$("#generate").click(function() {
 
 	    var datainput = $("#codeData").val().replace(/\s/g, '+');
