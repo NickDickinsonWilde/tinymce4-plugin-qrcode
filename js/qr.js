@@ -29,8 +29,8 @@
 
 	$("#image").click(function() {
 
-        alert($("#image").html());
-        return false;
+        //alert($("#image").html());
+        //return false;
 	    I_InsertHTML($("#image").html());
 	    I_Close();
 	});
