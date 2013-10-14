@@ -1,2 +1,6 @@
+Version 1.1.0 (2013-10-14)
+	Changed API from google (deprecated) to api.qrserver.com V1
+	Added bootstrap colorbox to produce colored images  
+
 Version 1.0.0 (2013-09-15)
 	First release.
