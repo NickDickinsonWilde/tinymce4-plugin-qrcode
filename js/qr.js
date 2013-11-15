@@ -70,7 +70,7 @@
 	  	$("#generate").prop("disabled", false);
 	  })
 
-		setTimeout(function() { // this will automatically close the alert and remove this if the users doesnt close it in 5 secs
+		setTimeout(function() { // this will automatically close the alert and remove this if the users doesn't close it in 5 secs
 
 			$("#alertdiv").remove();
 			$("#generate").prop("disabled", false);
