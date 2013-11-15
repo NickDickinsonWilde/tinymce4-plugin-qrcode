@@ -14,6 +14,9 @@
 	    var size = $("#codeSize").val();
 	    var encoding = $("#SelectCodding").val();
         var codecolor = $("#codeColor").val(function(i, v) {return v.replace("#","");}).val();
+        var bgcolor = $("#bgColor").val(function(i, v) {return v.replace("#","");}).val();
+        var ecc = $("#ecc").val();
+        var format = $("#format").val();
 
 
 	    if(datainput == "") {
@@ -22,14 +25,14 @@
 	        return false;
 
 	    } else {
-
+	        var imgdata = "<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&color=" + codecolor + "&bgcolor=" + bgcolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=" + ecc + "&format=" + format +"' data-name='" + datainput + "' />"
 	        if( $("#image").is(':empty')) {
-	            $("#image").append("<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&color=" + codecolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=L&format=png' data-name='" + datainput + "' />");
+	            $("#image").append(imgdata);
 	            $("#arrow").show();
 	            return false;
 	        } else {
 	            $("#image").html("");
-	            $("#image").append("<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&color=" + codecolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=L&format=png' data-name='" + datainput + "' />");
+	            $("#image").append(imgdata);
 	            $("#arrow").show();
 	            return false;
 	        }
