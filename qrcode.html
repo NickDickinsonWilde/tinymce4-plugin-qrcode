@@ -14,6 +14,7 @@
   <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="./colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
@@ -181,6 +182,30 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <label class="col-xs-5 control-label" for=
+            "margin">
+              Margin
+            </label>
+
+            <div class="col-xs-7">
+              <input class="form-control" id="margin" type="text"/>
+              <div class="slider" data-slider_value="1" data-slider_min="0" data-slider_max="50" data-slider_step="1" data-slider_input="#margin"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-5 control-label" for=
+            "q_zone">
+              Quiet Zone
+            </label>
+
+            <div class="col-xs-7">
+              <input class="form-control" id="q_zone" type="text"/>
+              <div class="slider" data-slider_value="4" data-slider_min="0" data-slider_max="100" data-slider_step="1" data-slider_input="#q_zone"></div>
+            </div>
+          </div>
+
           <div class="col-xs-3 pull-right">
             <button id="generate" type="button" class="btn btn-primary pull-right">
               <span class="glyphicon glyphicon-qrcode">
@@ -244,6 +269,7 @@
       document.write(unescape("%3Cscript src='js/jquery.js' type='text/javascript'%3E%3C/script%3E"));
     }
   </script>
+  <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script src="./js/bootstrap.min.js">
   </script>
   <script src="./colorpicker/js/bootstrap-colorpicker.min.js">
@@ -273,6 +299,22 @@
                     _createColorpickers();
                 });
             });
+  </script>
+  <script>
+    //creating the sliders for margin and quiet zone
+    $(".slider").each( function() {
+        var slider_data = $(this).data();
+        $(this).slider({
+            value:slider_data.slider_value,
+            min:slider_data.slider_min,
+            max:slider_data.slider_max,
+            step:slider_data.slider_step,
+            slide: function (event,ui) {
+                $(slider_data.slider_input).val(ui.value);
+                }
+            });
+        $(slider_data.slider_input).val(slider_data.slider_value);
+        });
   </script>
   </body>
 </html>
