@@ -64,33 +64,6 @@
               <div id="textarea_feedback"></div>
             </div>
           </div>
-          
-          <div class="form-group">
-            <label class="col-xs-5 control-label" for=
-            "format">
-              Format:
-            </label>
-
-            <div class="col-xs-7">
-              <select class="form-control" id="format">
-                <option value="eps">
-                  eps
-                </option>
-                <option value="gif">
-                  gif
-                </option>
-                <option value="jpg">
-                  jpg
-                </option>
-                <option value="png" selected="selected">
-                  png
-                </option>
-                <option value="svg">
-                  svg
-                </option>
-              </select>
-            </div>
-          </div>
 
           <div class="form-group">
             <label class="col-xs-5 control-label" for=
@@ -123,6 +96,27 @@
           </div>
 
           <div class="form-group">
+            <label class="col-xs-5 control-label" for="codeColor">
+              Color (optional)
+            </label>
+            <div class="col-xs-4">
+              <input class="form-control bscp" id="codeColor" value="#000000" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-5 control-label" for="bgColor">
+              Background Color (optional)
+            </label>
+            <div class="col-xs-4">
+              <input class="form-control bscp" id="bgColor" value="#FFFFFF" type="text">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend class="hideparent" data-hide_ref="#adv" data-hide_initial="true">Extra/Advanced Options</legend>
+            <div id="adv">
+          <div class="form-group"><!--ecc-->
             <label class="col-xs-5 control-label" for=
             "ecc">
               <abbr title="Error Correction Code">ECC</abbr> Level:
@@ -144,27 +138,9 @@
                 </option>
               </select>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-xs-5 control-label" for="codeColor">
-              Color (optional)
-            </label>
-            <div class="col-xs-4">
-              <input class="form-control bscp" id="codeColor" value="#000000" type="text">
             </div>
-          </div>
 
-          <div class="form-group">
-            <label class="col-xs-5 control-label" for="bgColor">
-              Background Color (optional)
-            </label>
-            <div class="col-xs-4">
-              <input class="form-control bscp" id="bgColor" value="#FFFFFF" type="text">
-            </div>
-          </div>
-
-          <div class="form-group">
+          <div class="form-group"><!--encoding-->
             <label class="col-xs-5 control-label" for=
             "SelectCodding">
               Encoding:
@@ -194,7 +170,7 @@
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form-group"><!--qzone-->
             <label class="col-xs-5 control-label" for=
             "q_zone">
               Quiet Zone
@@ -205,7 +181,35 @@
               <div class="slider" data-slider_value="4" data-slider_min="0" data-slider_max="100" data-slider_step="1" data-slider_input="#q_zone"></div>
             </div>
           </div>
+          
+          <div class="form-group"><!--fileformat-->
+            <label class="col-xs-5 control-label" for=
+            "format">
+              File Format:
+            </label>
 
+            <div class="col-xs-7">
+              <select class="form-control" id="format">
+                <option value="eps">
+                  eps
+                </option>
+                <option value="gif">
+                  gif
+                </option>
+                <option value="jpg">
+                  jpg
+                </option>
+                <option value="png" selected="selected">
+                  png
+                </option>
+                <option value="svg">
+                  svg
+                </option>
+              </select>
+            </div>
+          </div>
+            </div>
+          </fieldset>
           <div class="col-xs-3 pull-right">
             <button id="generate" type="button" class="btn btn-primary pull-right">
               <span class="glyphicon glyphicon-qrcode">
