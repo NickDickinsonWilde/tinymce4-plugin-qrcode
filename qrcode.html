@@ -262,59 +262,17 @@
 
   </div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript">
 	if (typeof jQuery === 'undefined')
     {
       document.write(unescape("%3Cscript src='js/jquery.js' type='text/javascript'%3E%3C/script%3E"));
     }
   </script>
+
   <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <script src="./js/bootstrap.min.js">
-  </script>
-  <script src="./colorpicker/js/bootstrap-colorpicker.min.js">
-  </script>
-  <script src="./js/qr.js">
-  </script>
-        <script>
-            $(function() {
-                // Code for those demos
-                var _createColorpickers = function() {
-                    $('#codeColor').colorpicker({
-                        format: 'hex'
-                    });
-                    $('#bgColor').colorpicker({
-                        format: 'hex'
-                    });
-                }
-                _createColorpickers();
-
-                $('.bscp-destroy').click(function(e) {
-                    e.preventDefault();
-                    $('.bscp').colorpicker('destroy');
-                });
-
-                $('.bscp-create').click(function(e) {
-                    e.preventDefault();
-                    _createColorpickers();
-                });
-            });
-  </script>
-  <script>
-    //creating the sliders for margin and quiet zone
-    $(".slider").each( function() {
-        var slider_data = $(this).data();
-        $(this).slider({
-            value:slider_data.slider_value,
-            min:slider_data.slider_min,
-            max:slider_data.slider_max,
-            step:slider_data.slider_step,
-            slide: function (event,ui) {
-                $(slider_data.slider_input).val(ui.value);
-                }
-            });
-        $(slider_data.slider_input).val(slider_data.slider_value);
-        });
-  </script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./colorpicker/js/bootstrap-colorpicker.min.js"></script>
+  <script src="./js/qr.min.js"></script>
   </body>
 </html>
