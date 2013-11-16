@@ -45,10 +45,14 @@ tinymce.PluginManager.add('qrcode', function(editor) {
 	editor.addShortcut('Ctrl+QR', '', openmanager);
 
 	editor.addMenuItem('qrcode', {
-		icon:'media',
+		icon: 'qrcode',
 		text: 'Create QRcode',
 		shortcut: 'Ctrl+QR',
 		onclick: openmanager,
 		context: 'insert'
 	});
+    
+    $('<link>')
+  .appendTo($('head'))
+  .attr({type : 'text/css', rel : 'stylesheet', href : tinyMCE.baseURL + '/plugins/qrcode/css/editor-style.css'});
 });
