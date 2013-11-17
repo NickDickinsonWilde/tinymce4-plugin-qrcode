@@ -28,12 +28,23 @@
         <form id="generator" class="form-horizontal">
 
           <div class="form-group">
-            <label class="col-xs-5 control-label" for=
+            <label class="col-xs-2 control-label" for="codeData">
+              Data
+            </label>
+
+            <div class="col-xs-10">
+              <textarea class="form-control" id="codeData" rows="2"></textarea>
+              <div id="textarea_feedback"></div>
+            </div>
+          </div>
+          <div class="float-left col-xs-5" style="float:left;min-height:322px;">
+                    <div class="form-group">
+            <label class="col-xs-6 control-label" for=
             "formatOption">
               Select format:
             </label>
 
-            <div class="col-xs-7">
+            <div class="col-xs-6">
               <select class=" form-control" id="formatOption">
                 <option value="some text here" selected="selected">
                   Text
@@ -53,25 +64,13 @@
               </select>
             </div>
           </div>
-
           <div class="form-group">
-            <label class="col-xs-2 control-label" for="codeData">
-              Data
-            </label>
-
-            <div class="col-xs-10">
-              <textarea class="form-control" id="codeData" rows="3"></textarea>
-              <div id="textarea_feedback"></div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-xs-5 control-label" for=
+            <label class="col-xs-6 control-label" for=
             "codeSize">
               Size:
             </label>
 
-            <div class="col-xs-7">
+            <div class="col-xs-6">
               <select class="form-control" id="codeSize">
                 <option value="75x75">
                   XXSmall
@@ -96,23 +95,30 @@
           </div>
 
           <div class="form-group">
-            <label class="col-xs-5 control-label" for="codeColor">
+            <label class="col-xs-6 control-label" for="codeColor">
               Color (optional)
             </label>
-            <div class="col-xs-4">
+            <div class="col-xs-6">
               <input class="form-control bscp" id="codeColor" value="#000000" type="text">
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-xs-5 control-label" for="bgColor">
-              Background Color (optional)
+            <label class="col-xs-6 control-label" for="bgColor">
+              <abbr title="Background">Bg</abbr> Color (optional)
             </label>
-            <div class="col-xs-4">
+            <div class="col-xs-6">
               <input class="form-control bscp" id="bgColor" value="#FFFFFF" type="text">
             </div>
           </div>
-
+          </div>
+          <fieldset class="float-left" style="float:left">
+                  <div id="image">
+      </div>
+      <span id="arrow" class="glyphicon glyphicon-arrow-up">
+        &nbsp;Click!
+      </span>
+      </div>
           <fieldset>
             <legend class="hideparent" data-hide_ref="#adv" data-hide_initial="true">Extra/Advanced Options</legend>
             <div id="adv">
@@ -210,7 +216,9 @@
           </div>
             </div>
           </fieldset>
-          <div class="col-xs-3 pull-right">
+                <button type="button" class="btn btn-info pull-left" data-toggle="collapse" data-target="#formats">
+        Help data formats ?
+      </button><div class="col-xs-3 pull-right">
             <button id="generate" type="button" class="btn btn-primary pull-right">
               <span class="glyphicon glyphicon-qrcode">
               </span>
@@ -221,19 +229,8 @@
         </form>
       </div>
 
-      <div id="image">
-      </div>
-      <span id="arrow" class="glyphicon glyphicon-arrow-up">
-        &nbsp;Click!
-      </span>
-
       <div id="alert_placeholder">
       </div>
-
-      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#formats">
-        Help data formats ?
-      </button>
-
 
       <div id="formats" class="panel panel-default collapse">
         <!-- Default panel contents -->
