@@ -13,15 +13,15 @@ tinymce.PluginManager.add('qrcode', function(editor) {
 
     function openmanager() {
         var title="Create QRcode";
-        if (typeof editor.settings.qrcode_title !== "undefined" && editor.settings.qrcode_title) {
-            title=editor.settingsqrcode_title;
+        if (typeof tinymce.settings.qrcode_title !== "undefined" && tinymce.settings.qrcode_title) {
+            title=tinymce.settingsqrcode_title;
         }
         win = editor.windowManager.open({
             title: title,
             file: tinyMCE.baseURL + '/plugins/qrcode/qrcode.html',
             filetype: 'image',
 	    	width: 650,
-            height: 540,
+            height: 510,
             inline: 1,
             buttons: [{
                 text: 'cancel',
@@ -45,14 +45,10 @@ tinymce.PluginManager.add('qrcode', function(editor) {
 	editor.addShortcut('Ctrl+QR', '', openmanager);
 
 	editor.addMenuItem('qrcode', {
-		icon: 'qrcode',
+		icon:'media',
 		text: 'Create QRcode',
 		shortcut: 'Ctrl+QR',
 		onclick: openmanager,
 		context: 'insert'
 	});
-    
-    $('<link>')
-  .appendTo($('head'))
-  .attr({type : 'text/css', rel : 'stylesheet', href : tinyMCE.baseURL + '/plugins/qrcode/css/editor-style.css'});
 });

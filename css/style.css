@@ -21,6 +21,9 @@ a img {
 #image {
 	cursor:pointer;
 }
+.hideparent {
+    cursor:pointer;
+}
 
 #formats {
 	margin:10px 0;
