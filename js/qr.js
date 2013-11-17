@@ -88,27 +88,27 @@
 	    var selected_item = $(this).val();
 	    $('#codeData').val(selected_item);
 	});
-    
+
     //colour pickers
-                var _createColorpickers = function() {
-                    $('#codeColor').colorpicker({
-                        format: 'hex'
-                    });
-                    $('#bgColor').colorpicker({
-                        format: 'hex'
-                    });
-                }
-                _createColorpickers();
+    var _createColorpickers = function() {
+        $('#codeColor').colorpicker({
+            format: 'hex'
+        });
+        $('#bgColor').colorpicker({
+            format: 'hex'
+        });
+    }
+    _createColorpickers();
 
-                $('.bscp-destroy').click(function(e) {
-                    e.preventDefault();
-                    $('.bscp').colorpicker('destroy');
-                });
+    $('.bscp-destroy').click(function(e) {
+        e.preventDefault();
+        $('.bscp').colorpicker('destroy');
+    });
 
-                $('.bscp-create').click(function(e) {
-                    e.preventDefault();
-                    _createColorpickers();
-                });
+    $('.bscp-create').click(function(e) {
+        e.preventDefault();
+        _createColorpickers();
+    });
     //creating the sliders for margin and quiet zone
     $(".slider").each( function() { //iterate over each element with the slider class.
         var slider_data = $(this).data(); //those elements *should* all have the data-* html 5 attributes for the slider setup.
@@ -122,14 +122,14 @@
                 }
             });
         $(slider_data.slider_input).val(slider_data.slider_value); //initial value set of the input element.
-        });
+    });
     //hide the advanced/extra options:
     $(".hideparent").each( function() {
         var hidedata = $(this).data();
         if (hidedata.hide_initial === true) {
             $(hidedata.hide_ref).hide();
             }
-        });
-        $(".hideparent").click( function(e) {
-            $($(this).data("hide_ref")).toggle();
-            });
+    });
+    $(".hideparent").click( function(e) {
+        $($(this).data("hide_ref")).toggle();
+    });
