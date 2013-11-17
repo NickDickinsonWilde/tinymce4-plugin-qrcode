@@ -14,6 +14,11 @@
 	    var size = $("#codeSize").val();
 	    var encoding = $("#SelectCodding").val();
         var codecolor = $("#codeColor").val(function(i, v) {return v.replace("#","");}).val();
+        var bgcolor = $("#bgColor").val(function(i, v) {return v.replace("#","");}).val();
+        var ecc = $("#ecc").val();
+        var format = $("#format").val();
+        var margin = $("#margin").val(); //range 0-50 default: 1
+        var q_zone = $("#q_zone").val(); //range: 0-100 default: 0
 
 
 	    if(datainput == "") {
@@ -22,14 +27,14 @@
 	        return false;
 
 	    } else {
-
+	        var imgdata = "<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=" + q_zone + "&margin=" + margin + "&color=" + codecolor + "&bgcolor=" + bgcolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=" + ecc + "&format=" + format +"' data-name='" + datainput + "' />"
 	        if( $("#image").is(':empty')) {
-	            $("#image").append("<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&color=" + codecolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=L&format=png' data-name='" + datainput + "' />");
+	            $("#image").append(imgdata);
 	            $("#arrow").show();
 	            return false;
 	        } else {
 	            $("#image").html("");
-	            $("#image").append("<img src='http://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(datainput) + "&qzone=2&color=" + codecolor + "&size=" + size + "&charset-target=" + encoding + "&ecc=L&format=png' data-name='" + datainput + "' />");
+	            $("#image").append(imgdata);
 	            $("#arrow").show();
 	            return false;
 	        }
@@ -83,3 +88,48 @@
 	    var selected_item = $(this).val();
 	    $('#codeData').val(selected_item);
 	});
+    
+    //colour pickers
+                var _createColorpickers = function() {
+                    $('#codeColor').colorpicker({
+                        format: 'hex'
+                    });
+                    $('#bgColor').colorpicker({
+                        format: 'hex'
+                    });
+                }
+                _createColorpickers();
+
+                $('.bscp-destroy').click(function(e) {
+                    e.preventDefault();
+                    $('.bscp').colorpicker('destroy');
+                });
+
+                $('.bscp-create').click(function(e) {
+                    e.preventDefault();
+                    _createColorpickers();
+                });
+    //creating the sliders for margin and quiet zone
+    $(".slider").each( function() { //iterate over each element with the slider class.
+        var slider_data = $(this).data(); //those elements *should* all have the data-* html 5 attributes for the slider setup.
+        $(this).slider({ //create the slider - using the slider data grabbed in the last step.
+            value:slider_data.slider_value,
+            min:slider_data.slider_min,
+            max:slider_data.slider_max,
+            step:slider_data.slider_step,
+            slide: function (event,ui) { //on UI update update the input item to the current slider value
+                $(slider_data.slider_input).val(ui.value);
+                }
+            });
+        $(slider_data.slider_input).val(slider_data.slider_value); //initial value set of the input element.
+        });
+    //hide the advanced/extra options:
+    $(".hideparent").each( function() {
+        var hidedata = $(this).data();
+        if (hidedata.hide_initial === true) {
+            $(hidedata.hide_ref).hide();
+            }
+        });
+        $(".hideparent").click( function(e) {
+            $($(this).data("hide_ref")).toggle();
+            });
