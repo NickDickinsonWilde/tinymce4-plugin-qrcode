@@ -31,11 +31,11 @@ For a demo <a href="http://www.cfcms.nl/tinymce-youtube/index.html#demo">see thi
 
 Also don't forget to get my other tinyMCE 4 plugin 'TinyMCE 4 plugin Youtube search and insert'
 
-Grab it <a href="http://codecanyon.net/item/tinymce-4-plugin-youtube-search-and-insert/5495575?ref=ceasar">here</a>
+Grab it <a href="http://codecanyon.net/item/tinymce-4-plugin-youtube-search-and-insert/5495575?ref=caesar">here</a>
 
 Or my other tinyMCE 4 plugin 'TinyMCE 4 plugin Flickr image search and place'
 
-Grab that one <a href="http://codecanyon.net/item/tinymce-4-plugin-flickr-image-search-and-place/5703888?ref=ceasar">here</a>
+Grab that one <a href="http://codecanyon.net/item/tinymce-4-plugin-flickr-image-search-and-place/5703888?ref=caesar">here</a>
 
 ### Commercial use
 
@@ -44,5 +44,5 @@ For <b>commercial use</b> you can buy an unlimited license for one product for 2
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UP9CAH952MAFA">Click here to buy the license with paypal !</a>
 
 ## Author
-**Ceasar Feijen (cfconsultancy)**
+**Caesar Feijen (cfconsultancy)**
 [http://www.cfconsultancy.nl](http://www.cfconsultancy.nl)
